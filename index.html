@@ -31,11 +31,7 @@
     .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
     nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
     .brand { display: flex; gap: 12px; align-items: center; font-weight: 800; letter-spacing: -.02em; }
-    .mark {
-      display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px;
-      color: var(--bg); background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 8px 28px rgba(98, 230, 196, .25);
-    }
+    .mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: var(--bg); background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 28px rgba(98, 230, 196, .25); }
     .links { display: flex; gap: 24px; color: var(--muted); font-size: .93rem; }
     .links a:hover { color: var(--text); }
     .hero { min-height: 700px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 60px; padding: 70px 0 110px; }
@@ -68,6 +64,8 @@
     .icon { color: var(--accent); font-size: 1.5rem; }
     h3 { margin: 18px 0 8px; font-size: 1.15rem; }
     .feature p { color: var(--muted); margin: 0; }
+    .feature-link { display: inline-block; margin-top: 18px; color: var(--accent); font-weight: 750; }
+    .feature-link:hover { color: var(--text); }
     .callout { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center; border: 1px solid rgba(98,230,196,.3); border-radius: 24px; padding: 34px; background: linear-gradient(110deg, rgba(98,230,196,.1), rgba(118,169,255,.08)); }
     footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: .9rem; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; }
@@ -85,8 +83,8 @@
 <body>
   <header class="wrap">
     <nav aria-label="Main navigation">
-      <a class="brand" href="#top"><span class="mark">◈</span> InCyIT</a>
-      <div class="links"><a href="#capabilities">Capabilities</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div>
+      <a class="brand" href="index.html"><span class="mark">◈</span> InCyIT</a>
+      <div class="links"><a href="#capabilities">Capabilities</a><a href="blog.html">Blog</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div>
     </nav>
   </header>
 
@@ -102,9 +100,7 @@
         <div class="glow"></div>
         <div class="card">
           <div class="card-top"><span>Cyber space insight</span><span class="status">Operational</span></div>
-          <div class="shield" aria-label="Security shield illustration">
-            <svg viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M80 8 143 31v52c0 43-26 76-63 94C43 159 17 126 17 83V31L80 8Z" stroke="#62E6C4" stroke-width="5"/><path d="m48 92 21 21 45-49" stroke="#EDF5FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="shield" aria-label="Security shield illustration"><svg viewBox="0 0 160 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M80 8 143 31v52c0 43-26 76-63 94C43 159 17 126 17 83V31L80 8Z" stroke="#62E6C4" stroke-width="5"/><path d="m48 92 21 21 45-49" stroke="#EDF5FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="metrics"><div class="metric"><strong>360°</strong><small>Visibility</small></div><div class="metric"><strong>Clear</strong><small>Advice</small></div><div class="metric"><strong>Secure</strong><small>Change</small></div></div>
         </div>
       </div>
@@ -114,19 +110,17 @@
       <div class="wrap">
         <div class="section-head"><h2>Insight that turns<br>risk into action.</h2><p>Connect business outcomes, technology decisions and security priorities through practical, outcome-focused guidance.</p></div>
         <div class="grid">
-          <article class="feature"><div class="icon">⌘</div><h3>Security Architecture &amp; Design</h3><p>Secure-by-design architecture and patterns for enterprise, cloud-native and hybrid environments.</p></article>
+          <article class="feature"><div class="icon">⌘</div><h3>Security Architecture &amp; Design</h3><p>Secure-by-design architecture and patterns for enterprise, cloud-native and hybrid environments.</p><a class="feature-link" href="patterns.html">Explore architecture patterns →</a></article>
           <article class="feature"><div class="icon">◎</div><h3>Risk Advisory and Assurance</h3><p>Clear, evidence-based assessments that turn uncertainty into prioritised action and assurance.</p></article>
           <article class="feature"><div class="icon">↗</div><h3>Transformation</h3><p>Security guidance that enables modernisation, strengthens resilience and supports sustainable change.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="approach">
-      <div class="wrap"><div class="callout"><div><div class="eyebrow">A better way forward</div><h2>Make security an enabler.</h2><p class="lead">Strong architecture is not a gate at the end of delivery. It is a foundation for faster, safer decisions.</p></div><a class="button primary" href="#contact">Let’s talk →</a></div></div>
-    </section>
+    <section id="approach"><div class="wrap"><div class="callout"><div><div class="eyebrow">A better way forward</div><h2>Make security an enabler.</h2><p class="lead">Strong architecture is not a gate at the end of delivery. It is a foundation for faster, safer decisions.</p></div><a class="button primary" href="#contact">Let’s talk →</a></div></div></section>
   </main>
 
-  <footer id="contact"><div class="wrap footer-row"><span>© <span id="year"></span> InCyIT</span><span>· Sydney, Australia</span></div></footer>
+  <footer id="contact"><div class="wrap footer-row"><span>© <span id="year"></span> InCyIT</span><span><a href="mailto:hello@example.com">hello@example.com</a> · Sydney, Australia</span></div></footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
